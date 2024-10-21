@@ -61,6 +61,37 @@ Python provides three logical operators:
 | `or`     | Returns `True` if at least one is `True`     | `(5 > 3) or (8 < 5)` is `True`   |
 | `not`    | Inverts the result                          | `not(5 > 3)` is `False`          |
 
+
+### Truth Tables for Python's Logical Operators
+
+#### Truth Table for `and`:
+
+| A     | B     | A and B |
+|-------|-------|---------|
+| True  | True  | True    |
+| True  | False | False   |
+| False | True  | False   |
+| False | False | False   |
+
+#### Truth Table for `or`:
+
+| A     | B     | A or B  |
+|-------|-------|---------|
+| True  | True  | True    |
+| True  | False | True    |
+| False | True  | True    |
+| False | False | False   |
+
+#### Truth Table for `not`:
+
+| A     | not A |
+|-------|-------|
+| True  | False |
+| False | True  |
+
+
+
+
 **Examples:**
 
 ```python
@@ -101,6 +132,9 @@ result = (a < b or b > c) and not(c == b)
 print(result)  # True, because the combination of conditions results in True
 ```
 
+
+
+
 ## Truthy and Falsy Values in Python
 
 In Python, values such as numbers and strings can be evaluated as `True` or `False` when used in logical operations.
@@ -119,6 +153,47 @@ print(bool(x))  # False, because 0 is falsy
 print(bool(y))  # True, because non-empty strings are truthy
 print(bool(z))  # False, because empty lists are falsy
 ```
+
+## Python Operator Precedence and Associativity Table
+
+| Precedence Level | Operator | Description | Associativity |
+|------------------|----------|-------------|---------------|
+| **1** (highest)  | `()`      | Parentheses (used for grouping) | N/A |
+|                  | `f(args)` | Function call | Left-to-right |
+|                  | `x[index]` | Indexing | Left-to-right |
+|                  | `x[index:index]` | Slicing | Left-to-right |
+|                  | `x.attribute` | Attribute reference | Left-to-right |
+|                  | `await x` | Await expression | N/A |
+| **2**            | `**`     | Exponentiation | Right-to-left |
+| **3**            | `+x`, `-x` | Unary plus, minus | Right-to-left |
+|                  | `~x`     | Bitwise NOT | Right-to-left |
+| **4**            | `*`, `/`, `//`, `%` | Multiplication, division, floor division, modulo | Left-to-right |
+| **5**            | `+`, `-` | Addition, subtraction | Left-to-right |
+| **6**            | `<<`, `>>` | Bitwise shift left, right | Left-to-right |
+| **7**            | `&`      | Bitwise AND | Left-to-right |
+| **8**            | `^`      | Bitwise XOR | Left-to-right |
+| **9**            | `|`      | Bitwise OR | Left-to-right |
+| **10**           | `in`, `not in`, `is`, `is not`, `<`, `<=`, `>`, `>=`, `!=`, `==` | Comparison operators | N/A |
+| **11**           | `not x`  | Boolean NOT | Right-to-left |
+| **12**           | `and`    | Boolean AND | Left-to-right |
+| **13** (lowest)  | `or`     | Boolean OR | Left-to-right |
+| **14**           | `if else` | Conditional expression | Right-to-left |
+| **15**           | `lambda` | Lambda expression | N/A |
+| **16**           | `=`       | Assignment | Right-to-left |
+|                  | `+=`, `-=`, `*=`, `/=`, `//=`, `%=`, `**=`, `&=`, `|=`, `^=`, `>>=`, `<<=` | Augmented assignment | Right-to-left |
+| **17**           | `yield x` | Yield expression | N/A |
+| **18**           | `yield from x` | Yield from expression | N/A |
+| **19**           | `raise`   | Raise exception | N/A |
+| **20** (lowest)  | `del`     | Delete statement | N/A |
+|                  | `pass`    | Pass statement | N/A |
+|                  | `break`, `continue` | Loop control | N/A |
+|                  | `return`  | Return statement | N/A |
+
+### Explanation of Associativity:
+- **Left-to-right**: Operators are evaluated from left to right.
+- **Right-to-left**: Operators are evaluated from right to left.
+- **N/A**: Either not applicable or the order of evaluation is not explicitly defined.
+
 
 ## Summary
 - **Booleans** are either `True` or `False`.
