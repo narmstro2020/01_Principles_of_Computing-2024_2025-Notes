@@ -154,6 +154,116 @@ print(bool(y))  # True, because non-empty strings are truthy
 print(bool(z))  # False, because empty lists are falsy
 ```
 
+
+### Falsy Values  
+These values evaluate to `False` when used in a boolean context:
+
+1. **None**
+   ```python
+   None
+   ```
+
+2. **False**
+   ```python
+   False
+   ```
+
+3. **Zero of any numeric type**  
+   - Integer zero:  
+     ```python
+     0
+     ```
+   - Float zero:  
+     ```python
+     0.0
+     ```
+   - Complex zero:  
+     ```python
+     0j
+     ```
+
+4. **Empty sequences and collections**  
+   - Empty string:  
+     ```python
+     ""
+     ```
+   - Empty list:  
+     ```python
+     []
+     ```
+   - Empty tuple:  
+     ```python
+     ()
+     ```
+   - Empty dictionary:  
+     ```python
+     {}
+     ```
+   - Empty set:  
+     ```python
+     set()
+     ```
+   - Empty range:  
+     ```python
+     range(0)
+     ```
+
+5. **Empty objects or custom objects with `__bool__()` or `__len__()` methods that return `False` or `0`.**
+
+### Truthy Values  
+All other values are considered truthy, meaning they evaluate to `True` in a boolean context. Common examples include:
+
+1. **Non-zero numbers**  
+   - Positive or negative integers:  
+     ```python
+     1, -1, 42, -42
+     ```
+   - Positive or negative floats:  
+     ```python
+     1.0, -1.0, 3.14, -3.14
+     ```
+   - Non-zero complex numbers:  
+     ```python
+     1j, -1j, 3+4j, -3-4j
+     ```
+
+2. **Non-empty sequences and collections**  
+   - Non-empty strings:  
+     ```python
+     "hello", "0", "False"
+     ```
+   - Non-empty lists:  
+     ```python
+     [1, 2, 3]
+     ```
+   - Non-empty tuples:  
+     ```python
+     (1, 2, 3)
+     ```
+   - Non-empty dictionaries:  
+     ```python
+     {"key": "value"}
+     ```
+   - Non-empty sets:  
+     ```python
+     {1, 2, 3}
+     ```
+   - Non-empty ranges:  
+     ```python
+     range(1, 10)
+     ```
+
+3. **True**  
+   ```python
+   True
+   ```
+
+4. **Objects that are not empty and do not define `__bool__()` or `__len__()` methods that return falsy values.**
+
+All Python objects are either truthy or falsy based on their values or implementations.
+
+
+
 ## Python Operator Precedence and Associativity Table
 
 | Precedence Level | Operator | Description | Associativity |
