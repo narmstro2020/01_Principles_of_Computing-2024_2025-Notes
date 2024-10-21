@@ -128,26 +128,9 @@ print(bool(z))  # False, because empty lists are falsy
 
 By mastering these concepts, you’ll be able to write more complex decision-making code in Python!
 
----
-
-## Assignments
-
-### Assignment 1: Voting Eligibility
-
-Write a Python program that checks if a person is eligible to vote. The person is eligible to vote if they are 18 years or older.
-
-**Instructions:**
-- Assign an integer value to represent the person's age from the input function.  
-- Use a relational operator to check if the age is greater than or equal to 18.
-- Print the result (either `True` or `False`).
 
 
-### Assignment 2: Simplified Blackjack Game
 
-In this assignment, you will simulate a very basic version of a Blackjack game. The player will be dealt two cards, and the goal is to check if the player's total is less than or equal to 21.
 
-**Instructions:**
-- Assign two integer values to represent the two cards from the input function.
-- Use a relational operator to check if the sum of the two cards is less than or equal to 21.
-- Print the result (either `True` or `False`).
+
 
